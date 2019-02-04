@@ -1,0 +1,19 @@
+{
+    "name": "cognetif/apimail",
+    "description": "Perch app to send email via web API rather than sendmail or SMTP",
+    "type": "library",
+    "require": {
+        "sendgrid/sendgrid": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jordin Brown",
+            "email": "jbrown@cognetif.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4":{
+            "Cognetif\\" :"lib\\Cognetif"}
+    }
+}
