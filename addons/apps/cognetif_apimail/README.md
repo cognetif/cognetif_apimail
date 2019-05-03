@@ -32,7 +32,8 @@ If you need help creating your connection, contact [Cognetif](https://cognetif.c
     ```
 
 # Usage
-1. The app is seamlessly integrated into Perch and once configured, will send all email via the API connector configured. 
+1. The app is seamlessly integrated into Perch and once configured, will send all email via the API connector configured.
+2. If you want to use another mail API, simply create your own class that extends the `\Cognetif\ApiMail\Connections\BaseConnection` class and add update the `COGNETIF_APIMAIL_CONNECTOR` constant to point to your new fully qualified class name.
 
 ## License
 This project is free, open source, and GPL friendly. You can use it for commercial projects, open source projects, or really almost whatever you want.
