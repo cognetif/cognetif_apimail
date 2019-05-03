@@ -12,7 +12,7 @@ You can create a new connection to suit your need, simply extend the `\Cognetif\
 If you need help creating your connection, contact [Cognetif](https://cognetif.com) and we can help implement you required API.
 
 ## Requirements
-1. Perch version 3.##
+1. Perch version 3.1.5
 1. PHP 7+
 
 
