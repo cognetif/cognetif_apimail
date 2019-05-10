@@ -29,8 +29,12 @@ class Manager
                     ->setRecipients($email->subject->recipients)
                     ->setIsHtml($email->subject->is_html)
                     ->setBody($email->subject->body)
-                    ->setReplyTo($email->subject->reply_to)
-                    ->setAttachments($email->subject->attachments);
+                    ->setReplyTo($email->subject->reply_to);
+
+                if (isset($email->subject->reply_to)) {
+                    $connector->setReplyTo($email->subject->reply_to);
+
+                }
 
                 if (isset($email->subject->bcc)) {
                     $connector->setBcc($email->subject->bcc);
