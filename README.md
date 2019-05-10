@@ -18,6 +18,7 @@ If you need help creating your connection, contact [Cognetif](https://cognetif.c
 
 ## Installation
 1. Add cognetif_apimail to `addons/apps/` folder and `apps.php`
+1. Configure Perch to send email via the `api` method in  `perch/config/config.php` by adding: `define('PERCH_EMAIL_METHOD', 'api');`
 1. Install dependencies with composer from within `cognetif_apimail` directory:
     ```bash
       perch/addons/apps/cognetif_apimail $ composer install
