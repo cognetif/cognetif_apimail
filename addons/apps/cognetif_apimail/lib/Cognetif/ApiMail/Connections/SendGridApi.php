@@ -25,7 +25,9 @@ class SendGridApi extends BaseConnection
                 $email->addBcc($bcc['email'], $bcc['name']);
             }
 
-            $email->setReplyTo($this->replyTo['email'], $this->replyTo['name']);
+            if (array_key_exists('email', $this->replyTo) && array_key_exists('name', $this->replyTo) ) {
+                $email->setReplyTo($this->replyTo['email'], $this->replyTo['name']);
+            }
 
             if ($this->isHtml) {
                 $email->addContent("text/html", $this->body);
