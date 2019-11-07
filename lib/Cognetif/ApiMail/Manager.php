@@ -28,12 +28,10 @@ class Manager
                     ->setCharSet($email->subject->charset)
                     ->setRecipients($email->subject->recipients)
                     ->setIsHtml($email->subject->is_html)
-                    ->setBody($email->subject->body)
-                    ->setReplyTo($email->subject->reply_to);
+                    ->setBody($email->subject->body);
 
                 if (isset($email->subject->reply_to)) {
                     $connector->setReplyTo($email->subject->reply_to);
-
                 }
 
                 if (isset($email->subject->bcc)) {
@@ -44,7 +42,7 @@ class Manager
                     $connector->setAltBody($email->subject->altbody);
                 }
 
-                $connector->send();
+               $result = $connector->send();
             }
 
         }
