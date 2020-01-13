@@ -9,7 +9,7 @@ class Manager
     /**
      * @param \PerchSystemEvent $email
      */
-    public static function email_send(\PerchSystemEvent $email): void
+    public static function email_send(\PerchSystemEvent $email)
     {
         if (!defined('COGNETIF_APIMAIL_CONNECTOR')) {
             \PerchUtil::debug('Missing API Mail Connector configuration', 'error');
